@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title + ' | ' + systemName}"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <script src="js/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/myheart.css">
+</head>
+<body>
+<div class="all">
+    <canvas class="rain" style="position: fixed"></canvas>
+    <div class="header">
+        <h1 class="vintage4" th:text="${author}"></h1>
+    </div>
+    <div class="main">
+        <div class="heart">
+            <div class='topLeft'></div>
+            <div class='topRight'></div>
+            <div class='bottom'></div>
+        </div>
+        <div class="chooseBtn">
+            <button type="button" class="yesterday am-btn am-btn-danger am-btn-xl">
+                <i class="am-icon-mercury" style="margin-right: 5px"></i>
+                往昔
+            </button>
+            <button type="button" class="today am-btn am-btn-warning am-btn-xl">
+                <i class="am-icon-venus" style="margin-right: 5px"></i>
+                今日
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="js/rain.js"></script>
+<script src="js/myheart.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title + ' | ' + systemName}"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <script src="js/header.js"></script>
+    <script src="js/lightMoreGallery.js"></script>
+    <link rel="stylesheet" href="css/lightMoreGallery.css">
+    <link rel="stylesheet" href="css/today.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="all">
+        <div class="head">
+            <h1 class="vintage4" th:text="${author + '日常'}"></h1>
+            <div class="h1Word">
+                <p>曾经我们都以为自己可以为爱情死</p>
+                <p>其实爱情死不了人</p>
+                <p>它只会在最疼的地方扎上一针</p>
+                <p>然后我们欲哭无泪</p>
+                <p>我们辗转反侧</p>
+                <p>我们久病成医</p>
+                <p>我们百炼成钢</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="am-container">
+                <div class="me am-u-sm-12 am-u-lg-10">
+                    <div class="sayContent">
+                        <hr data-am-widget="divider" style="border-top-color: #906f6f" class="am-divider am-divider-dashed" />
+                        <div style="text-align: center;color: red">
+                            <h1 class="dayDayTitle">===== 每天的闹腾事 ❥(^_-) ======</h1>
+                        </div>
+                        <div class="says">
+                        </div>
+                        <div class="saysButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div th:replace="footer :: footer"></div>
+    </div>
+    <script src="js/heart.js"></script>
+    <script src="js/today.js"></script>
+</body>
+</html>

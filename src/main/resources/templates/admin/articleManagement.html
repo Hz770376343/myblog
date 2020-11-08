@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js fixed-layout" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="${systemName}"></title>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/header.js"></script>
+    <script src="lib/underscore.min.js"></script>
+    <script src="js/admin/articleManagement.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/plugs_paging.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/superadmin.css">
+    <link rel="stylesheet" href="css/plugs_paging.css">
+</head>
+<body>
+
+<div id="articleManagement">
+    <div class="subject">
+        <div class="articles">
+            <div class="am-g">
+                <div class="am-u-sm-12 " style="padding-left: 0;">
+                    <ol class="am-breadcrumb  am-breadcrumb-slash">
+                        <li class="am-active am-icon-home"> 后台管理</li>
+                        <li class="am-active">文章管理</li>
+                    </ol>
+                    <div class="articleManagementTable">
+                        <table class="table am-table am-table-bd am-table-striped admin-content-table  am-animation-slide-right">
+                            <thead>
+                            <tr>
+                                <th>文章标题</th><th>发布时间</th><th>文章分类</th><th>浏览量</th><th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody class="tables">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除文章模态框-->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="deleteAlter">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">删除文章</div>
+        <div class="am-modal-bd">
+            你确定要删除吗？删除了就无法恢复了呦!
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="sureArticleDeleteBtn am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
+<!--消息盒子+反馈-->
+<div th:replace="other :: other"></div>
+
+</body>
+</html>

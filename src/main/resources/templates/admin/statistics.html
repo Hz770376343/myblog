@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js fixed-layout" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title th:text="${systemName}"></title>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/header.js"></script>
+    <script src="lib/underscore.min.js"></script>
+    <script src="js/admin/statistics.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/plugs_paging.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/superadmin.css">
+    <link rel="stylesheet" href="css/plugs_paging.css">
+</head>
+<body>
+
+<div id="statistics">
+    <div class="subject">
+        <ol class="am-breadcrumb  am-breadcrumb-slash">
+            <li class="am-active am-icon-home"> 后台管理</li>
+            <li class="am-active">仪表盘</li>
+        </ol>
+        <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+            <li><a href="#" onclick="return false;" class="am-text-success"><span class="am-icon-btn am-icon-meh-o"></span><br/>总访问量<br/><span class="allVisitor">0</span></a></li>
+            <li><a href="#" onclick="return false;" class="am-text-warning"><span class="am-icon-btn am-icon-recycle"></span><br/>昨日访问<br/><span class="yesterdayVisitor">0</span></a></li>
+            <li><a href="#" onclick="return false;" class="am-text-danger"><span class="am-icon-btn am-icon-user-md"></span><br/>总用户量<br/><span class="allUser">0</span></a></li>
+            <li><a href="#" onclick="return false;" class="am-text-secondary"><span class="am-icon-btn am-icon-file-text"></span><br/>文章量<br/><span class="articleNum">0</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--消息盒子+反馈-->
+<div th:replace="other :: other"></div>
+
+</body>
+</html>
